@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 8</title>
+</head>
+<body>
+<p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate deleniti
+    molestias mollitia pariatur porro saepe! Dolorem eaque earum eligendi, iste maxime molestias quam vitae.
+    Dolore hic in quae sed.
+</p>
+
+<div id="rules" class="fc bp">
+    Первое правило Бойцовского клуба: никому не рассказывать о Бойцовском клубе. Второе правило Бойцовского
+    клуба: никогда никому не рассказывать о Бойцовском клубе. Третье правило Бойцовского клуба: в схватке
+    участвуют только двое. Четвертое правило Бойцовского клуба: не более одного поединка за один раз
+</div>
+
+<ul>
+    <li class="fc_rules rule1">Первое правило Бойцовского клуба: никому не рассказывать о Бойцовском клубе.</li>
+    <li class="fc_rules rule2">Второе правило Бойцовского
+        клуба: никогда никому не рассказывать о Бойцовском клубе
+    </li>
+    <li class="fc_rules rule3">Третье правило Бойцовского клуба: в схватке
+        участвуют только двое.
+    </li>
+    <li class="fc_rules rule4">Четвертое правило Бойцовского клуба: не более одного поединка за один раз</li>
+</ul>
+
+<script>
+    //- Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
+    //     -- отримує текст з параграфа з id "content"
+    //     -- отримує текст з блоку з id "rules"
+    //     -- замініть текст параграфа з id 'content' на будь-який інший
+    //     -- замініть текст параграфа з id 'rules' на будь-який інший
+    //     -- змініть кожному елементу колір фону на червоний
+    //     -- змініть кожному елементу колір тексту на синій
+    //     -- отримати весь список класів елемента з id=rules і вивести їх в console.log
+    //     -- поміняти колір тексту у всіх елементів fc_rules на червоний
+
+    //     -- отримує текст з параграфа з id "content"
+    // let getPElementByID = document.getElementById("content");
+    // let getPText = getPElementByID.innerText;
+    // console.log(getPText);
+
+
+    //     -- отримує текст з блоку з id "rules"
+    // let getElementByIdRules = document.getElementById("rules");
+    // let getTextByIdRules = getElementByIdRules.innerText;
+    // console.log(getTextByIdRules);
+
+
+    //     -- замініть текст параграфа з id 'content' на будь-який інший
+    // let getElementByIdContent = document.getElementById("content");
+    // let changeText = getElementByIdContent.innerText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vel.";
+    // console.log(changeText);
+
+
+    //     -- замініть текст параграфа з id 'rules' на будь-який інший
+    // let getElementByIdRules = document.getElementById("rules");
+    // let changeText = getElementByIdRules.innerText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae natus nesciunt officia provident quis quo vel. At eveniet libero quia!";
+    // console.log(changeText);
+
+
+    //     -- змініть кожному елементу колір фону на червоний
+    // let getAllElements = document.body.getElementsByTagName("*");
+    // for (let Element of getAllElements) {
+    //    Element.style.background = "red";
+    // }
+
+
+    //     -- змініть кожному елементу колір тексту на синій
+    // let getAllElements = document.body.getElementsByTagName("*");
+    // for (let Element of getAllElements) {
+    //     Element.style.background = "blue";
+    // }
+
+
+    //     -- отримати весь список класів елемента з id=rules і вивести їх в console.log
+    // let elementWithIdRules = document.getElementById("rules");
+    // let allClasses = elementWithIdRules.classList;
+    // console.log(allClasses);
+
+
+    //     -- поміняти колір тексту у всіх елементів fc_rules на червоний
+    // let getNameClassFc_rules = document.getElementsByClassName("fc_rules");
+    // for (let classItem of getNameClassFc_rules) {
+    //     classItem.style.color = "red";
+    // }
+
+</script>
+</body>
+</html>
