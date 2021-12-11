@@ -1,8 +1,4 @@
-// let usersFavoriteArr = [];
-//
-// for (let i = 1; i < localStorage.length+1; i++) {
-//     usersFavoriteArr.push(JSON.parse(localStorage.getItem(i.toString())));
-// }
+// let usersFavoriteArr = JSON.parse(localStorage.getItem("allUsers"));
 //
 // for (let user of usersFavoriteArr) {
 //     let mainDiv = document.createElement("div");
@@ -24,6 +20,19 @@
 //     pStatus.innerText = (`Status: ${user.status}`);
 //     pStatus.classList.add("styleP");
 // }
+//
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

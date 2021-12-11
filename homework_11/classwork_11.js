@@ -30,8 +30,6 @@
 //
 // let favorites = [];
 //
-// let i = 0;
-//
 // for (let user of users) {
 //     let mainDiv = document.createElement("div");
 //     document.body.appendChild(mainDiv);
@@ -60,14 +58,10 @@
 //
 //     button.onclick = function (e) {
 //         e.preventDefault();
-//         i++
-//         localStorage.setItem(i.toString(), JSON.stringify(user));
+//         favorites.push({name: user.name, age: user.age, status: user.status});
+//         localStorage.setItem("allUsers", JSON.stringify(favorites));
 //     }
 // }
-
-
-
-
 
 
 

@@ -42,23 +42,13 @@
 // form.appendChild(button);
 // button.innerText = "SAVED";
 //
+// let arrCharacteristics = [];
+//
 // button.onclick = function (e) {
-//     e.preventDefault();
-//     let arrInputs = [modelInput.value, typeInput.value, volumeInput.value];
-//     localStorage.setItem("characteristics", JSON.stringify(arrInputs));
+//     e.preventDefault()
+//     arrCharacteristics.push({model: modelInput.value, type: typeInput.value, volume: volumeInput.value});
+//     localStorage.setItem("characteristics", JSON.stringify(arrCharacteristics));
 // }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
