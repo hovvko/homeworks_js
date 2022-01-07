@@ -110,34 +110,44 @@ mainDiv.appendChild(buttonPostOfCurrentUser);
 buttonPostOfCurrentUser.innerText = "Post Of Current User";
 buttonPostOfCurrentUser.classList.add("styleButtonPostOfCurrentUser")
 
-
+let number = 1;
 
 buttonPostOfCurrentUser.onclick = function () {
     fetch(`https://jsonplaceholder.typicode.com/users/${arr[0]}/posts`).then(response => {
         response.json().then(json => {
+            let h1 = document.createElement("h1");
+            document.body.appendChild(h1);
+            h1.innerText = "All titles:";
 
-            let divTitlePost = document.createElement("div");
-            document.body.appendChild(divTitlePost);
-            divTitlePost.classList.add("styleD");
-
-            let h1Info = document.createElement("h1");
-            divTitlePost.appendChild(h1Info);
-            h1Info.innerText = "All Titles"
+            let mDiv = document.createElement("div");
+            document.body.appendChild(mDiv);
+            mDiv.classList.add("mDivStyle")
 
             for (let jsonElement of json) {
+                let divTitlePost = document.createElement("div");
+                mDiv.appendChild(divTitlePost);
+                divTitlePost.classList.add("styleD");
+                divTitlePost.style.width = "19%";
+                divTitlePost.style.position = "relative";
+                divTitlePost.style.height = "170px";
+
                 let pTitle = document.createElement("p");
                 divTitlePost.appendChild(pTitle);
-                pTitle.innerText = `Title: ${jsonElement.title}`;
-            }
+                pTitle.innerText = `Title ${number++}: ${jsonElement.title}`;
 
-            let buttonGoToPost = document.createElement("button");
-            divTitlePost.appendChild(buttonGoToPost);
-            buttonGoToPost.innerText = "GO TO POST DETAILS";
-            buttonGoToPost.classList.add("styleButtonPostOfCurrentUser")
+                let buttonGoToPost = document.createElement("button");
+                divTitlePost.appendChild(buttonGoToPost);
+                buttonGoToPost.innerText = "GO TO POST DETAILS";
+                buttonGoToPost.classList.add("styleButtonPostOfCurrentUser")
+                buttonGoToPost.style.position = "absolute";
+                buttonGoToPost.style.bottom = "0";
 
-            buttonGoToPost.onclick = function () {
-                location.href = "post-details.html";
-                localStorage.setItem("PostInfo", JSON.stringify(json));
+
+                buttonGoToPost.onclick = function () {
+                    location.href = "post-details.html";
+                    localStorage.setItem("PostInfo", JSON.stringify(json));
+                    localStorage.setItem("Title", JSON.stringify(jsonElement.title))
+                }
             }
         })
     })
@@ -149,8 +159,37 @@ buttonPostOfCurrentUser.onclick = function () {
 
 
 
-
-
+//
+// buttonPostOfCurrentUser.onclick = function () {
+//     fetch(`https://jsonplaceholder.typicode.com/users/${arr[0]}/posts`).then(response => {
+//         response.json().then(json => {
+//
+//             let divTitlePost = document.createElement("div");
+//             document.body.appendChild(divTitlePost);
+//             divTitlePost.classList.add("styleD");
+//
+//             let h1Info = document.createElement("h1");
+//             divTitlePost.appendChild(h1Info);
+//             h1Info.innerText = "All Titles:"
+//
+//             for (let jsonElement of json) {
+//                 let pTitle = document.createElement("p");
+//                 divTitlePost.appendChild(pTitle);
+//                 pTitle.innerText = `Title: ${jsonElement.title}`;
+//             }
+//
+//             let buttonGoToPost = document.createElement("button");
+//             divTitlePost.appendChild(buttonGoToPost);
+//             buttonGoToPost.innerText = "GO TO POST DETAILS";
+//             buttonGoToPost.classList.add("styleButtonPostOfCurrentUser")
+//
+//             buttonGoToPost.onclick = function () {
+//                 location.href = "post-details.html";
+//                 localStorage.setItem("PostInfo", JSON.stringify(json));
+//             }
+//         })
+//     })
+// }
 
 
 

@@ -7,21 +7,26 @@ fetch("https://jsonplaceholder.typicode.com/users").then(response => {
 
         let localArr = [];
 
+        let mainDiv = document.createElement("div");
+        document.body.appendChild(mainDiv)
+        mainDiv.classList.add("mDivStyle")
+
         for (let jsonElement of json) {
-            let mainDiv = document.createElement("div");
-            document.body.appendChild(mainDiv);
-            mainDiv.classList.add("styleD");
+            let divContainer = document.createElement("div");
+            mainDiv.appendChild(divContainer);
+            divContainer.classList.add("styleD");
+            divContainer.classList.add("indexWidth");
 
             let pId = document.createElement("p");
-            mainDiv.appendChild(pId);
+            divContainer.appendChild(pId);
             pId.innerText = `Id: ${jsonElement.id}`;
 
             let pName = document.createElement("p");
-            mainDiv.appendChild(pName);
+            divContainer.appendChild(pName);
             pName.innerText = `Name: ${jsonElement.name}`;
 
             let buttonUserDetails = document.createElement("button");
-            mainDiv.appendChild(buttonUserDetails);
+            divContainer.appendChild(buttonUserDetails);
             buttonUserDetails.innerText = "GO TO USER DETAILS";
 
             buttonUserDetails.onclick = function () {
@@ -50,3 +55,31 @@ fetch("https://jsonplaceholder.typicode.com/users").then(response => {
 // блоки с краткой информацией про post - в ряд по 5 объектов.
 // post-details.html - блок с информацией про пост вверху. Комментарии - по 4 в ряд.
 // Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так, что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
